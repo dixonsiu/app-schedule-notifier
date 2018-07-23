@@ -102,4 +102,22 @@
             </prop>
         </propstat>
     </response>
+    <response>
+      <href>dcbox:/ServiceInfo</href>
+      <propstat>
+          <prop>
+              <resourcetype>
+                  <collection/>
+              </resourcetype>
+          </prop>
+      </propstat>
+  </response>
+  <response>
+      <href>dcbox:/ServiceInfo/ServiceInfo.json</href>
+      <propstat>
+          <prop>
+              <getcontenttype>application/json</getcontenttype>
+          </prop>
+      </propstat>
+  </response>
 </multistatus>
