@@ -1,5 +1,6 @@
 function(request) {
   var targetCell = pjvm.getCellName(); //UserCell
+  var targetBox = pjvm.getBoxName(); //Box
   var host = request.host;
   var headers = request.headers;
   var authorization = headers.authorization;
@@ -40,7 +41,7 @@ function(request) {
 ///デバック用出力///
   try {
     var TimertestAccessor = clientAccessor.cell(targetCell); //内部的にトークンをトランスセルトークンに切り替え
-    var TimertestBoxAccessor = TimertestAccessor.box("app-schedule-notifier");
+    var TimertestBoxAccessor = TimertestAccessor.box(targetBox);
     var TimertestCollectionAccessor = TimertestBoxAccessor.odata("TimerList");
     var TimertestEntityAccessor = TimertestCollectionAccessor.entitySet("timer_list");
   } catch (e) {
@@ -67,7 +68,7 @@ function(request) {
     var ServiceInfo = [];
     try{
       var SlackInfoAccessor = clientAccessor.cell(targetCell); //内部的にトークンをトランスセルトークンに切り替え
-      var SlackInfoBoxAccessor = SlackInfoAccessor.box("app-schedule-notifier");
+      var SlackInfoBoxAccessor = SlackInfoAccessor.box(targetBox);
       var info = SlackInfoBoxAccessor.getString("ServiceInfo/ServiceInfo.json");
       ServiceInfo = JSON.parse(info);
 
@@ -111,7 +112,7 @@ function(request) {
 
   var token = _p.as("serviceSubject").cell().getToken();
 
-  var url = "https://" + host + "/"+targetCell+"/__ctl/Rule(Name='"+evt_info+"',_Box.Name='app-schedule-notifier')";
+  var url = "https://" + host + "/"+targetCell+"/__ctl/Rule(Name='"+evt_info+"',_Box.Name='"+targetBox+"')";
   var headers = { "Authorization": "Bearer " + token.access_token, };
   var httpClient = new _p.extension.HttpClient();
   var httpCode, response;

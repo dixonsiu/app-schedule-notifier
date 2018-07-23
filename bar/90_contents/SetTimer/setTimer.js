@@ -1,5 +1,6 @@
 function(request) {
   var targetCell = pjvm.getCellName(); //ユーザセル
+  var targetBox = pjvm.getBoxName(); //Box
   var host = request.host;
   var headers = request.headers;
   var authorization = headers.authorization;
@@ -59,11 +60,11 @@ function(request) {
       "Name": scheduleId+"_s",
       "EventType": "timer.oneshot",
       "EventObject": setTime,
-      "_Box.Name":"app-schedule-notifier",
+      "_Box.Name": targetBox,
       "EventSubject":"personium-localunit:/"+targetCell+"/#me",
       "EventInfo": scheduleId+"_s",
       "Action": "exec",
-      "TargetUrl": "personium-localcell:/app-schedule-notifier/NotifySchedule/notifySchedule",
+      "TargetUrl": "personium-localbox:/NotifySchedule/notifySchedule",
     };
 
     var token = _p.as("serviceSubject").cell().getToken();
