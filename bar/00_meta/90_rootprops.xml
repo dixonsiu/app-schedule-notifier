@@ -6,7 +6,7 @@
                 <resourcetype>
                     <collection/>
                 </resourcetype>
-                <acl xml:base="https://demo.personium.io/app-schedule-notifier/__role/__/" xmlns:dc="urn:x-dcl:xmlns">
+                <acl xml:base="https://***/***/__role/__/" xmlns:dc="urn:x-dcl:xmlns">
                     <ace>
                         <principal>
                             <href>ReminderRole</href>
@@ -64,6 +64,70 @@
     </response>
     <response>
         <href>dcbox:/SetTimer/__src/setTimer.js</href>
+        <propstat>
+            <prop>
+                <getcontenttype>text/javascript</getcontenttype>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/UpdateTimer</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                    <p:service xmlns:p="urn:x-personium:xmlns"/>
+                </resourcetype>
+                <p:service language="JavaScript" subject="me" xmlns:D="DAV:" xmlns:p="urn:x-personium:xmlns" xmlns:Z="http://www.w3.com/standards/z39.50/">
+                    <p:path name="updateTimer" src="updateTimer.js"/>
+                </p:service>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/UpdateTimer/__src</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                </resourcetype>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/UpdateTimer/__src/updateTimer.js</href>
+        <propstat>
+            <prop>
+                <getcontenttype>text/javascript</getcontenttype>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/DeleteTimer</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                    <p:service xmlns:p="urn:x-personium:xmlns"/>
+                </resourcetype>
+                <p:service language="JavaScript" subject="me" xmlns:D="DAV:" xmlns:p="urn:x-personium:xmlns" xmlns:Z="http://www.w3.com/standards/z39.50/">
+                    <p:path name="deleteTimer" src="deleteTimer.js"/>
+                </p:service>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/DeleteTimer/__src</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                </resourcetype>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/DeleteTimer/__src/deleteTimer.js</href>
         <propstat>
             <prop>
                 <getcontenttype>text/javascript</getcontenttype>

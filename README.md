@@ -15,6 +15,21 @@
   "Action": "exec",
   "TargetUrl": "personium-localcell:/app-schedule-notifier/SetTimer/setTimer"
 }
+
+{
+  "EventType": "odata.update",
+  "EventObject": "personium-localcell:/io_personium_demo_app-personium-calendar/OData/vevent",
+  "Action": "exec",
+  "TargetUrl": "personium-localcell:/app-schedule-notifier/UpdateTimer/updateTimer"
+}
+
+{
+  "EventType": "odata.delete",
+  "EventObject": "personium-localcell:/io_personium_demo_app-personium-calendar/OData/vevent",
+  "Action": "exec",
+  "TargetUrl": "personium-localcell:/app-schedule-notifier/DeleteTimer/deleteTimer"
+}
+
 ```
 
 ### 利用方法
