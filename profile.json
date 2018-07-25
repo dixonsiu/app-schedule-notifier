@@ -1,0 +1,7 @@
+{
+    "DisplayName": "ScheduleNotifier",
+    "Description": "Schedule Notifier using Slack service",
+    "Image": "",
+    "ProfileImageName": "",
+    "CellType": "App"
+}

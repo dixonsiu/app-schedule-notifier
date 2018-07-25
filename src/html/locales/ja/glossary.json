@@ -1,0 +1,16 @@
+{
+    "title": "予定通知アプリ",
+    "sessionExpiredDialog": {
+        "title": "セッション期限切れ",
+        "action": "$t(glossary:title)を終了します。",
+        "btnOk": "OK"
+    },
+    "irrecoverableErrorDialog": {
+        "title": "$t(glossary:title)を終了します ..."
+    },
+    "msg": {
+        "info": {
+            "description": "{{name}}さん、こんにちは。<br>予定通知アプリを使うためには、はじめにSlackの設定が必要です。"
+        }
+    }
+}
