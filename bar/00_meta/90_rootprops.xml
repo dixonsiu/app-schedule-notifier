@@ -6,7 +6,7 @@
                 <resourcetype>
                     <collection/>
                 </resourcetype>
-                <acl xml:base="https://***/***/__role/__/" xmlns:dc="urn:x-dcl:xmlns">
+                <acl xml:base="https://demo.personium.io/app-schedule-notifier/__role/__/" xmlns:dc="urn:x-dcl:xmlns">
                     <ace>
                         <principal>
                             <href>ReminderRole</href>

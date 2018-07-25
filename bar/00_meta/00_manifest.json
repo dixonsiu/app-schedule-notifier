@@ -2,5 +2,5 @@
     "bar_version": "1",
     "box_version": "1",
     "DefaultPath": "app-schedule-notifier",
-    "schema": "https://***/***/"
+    "schema": "https://demo.personium.io/app-schedule-notifier/"
 }

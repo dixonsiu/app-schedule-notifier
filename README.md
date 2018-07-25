@@ -2,7 +2,6 @@
 予定slack通知サービス（Prsoniumカレンダーとの連携を前提）
 ### 準備
 1. slackのワークスペース、Botの作成（slack通知のためにはBotトークンが必要）
-1. bar/00_meta/00_manifest.jsonの***をアプリCell情報に変更（現在、https://demo.personium.io/test-matsuzoe/ にアプリが配備されている）
 1. bar/90_contents/ServiceInfo/ServiceInfo.jsonに必要な情報を記述
 1. barフォルダを圧縮して、barファイルを作成
 1. Boxインストール（Personiumカレンダーアプリを自分のユーザセルにインストールしていることが前提）
